@@ -9,6 +9,8 @@ This section documents the process of migrating end devices from {{% ttnv2 %}} t
 
 <!--more-->
 
+{{< note >}} Make sure to migrate your gateways and devices from {{% ttnv2 %}} to {{% tts %}} as soon as possible, since {{% ttnv2 %}} deployments are becoming read-only on **July 1, 2021**, and the {{% ttnv2 %}} machines are planned to be completely shut down on **December 31, 2021**. {{</ note >}}
+
 {{< warning >}} We highly recommend to always test the migration on a single end device or a small batch of end devices in order to make sure the migration process goes as expected. {{</ warning >}}
 
 ## Prerequisites
@@ -18,6 +20,8 @@ This section documents the process of migrating end devices from {{% ttnv2 %}} t
 3. User account in {{% tts %}}.
 
 {{< note >}} We **highly recommend** using {{% tts %}} version `3.12.0` or higher. Some of the features (like session migration) from this guide might not be available for prior versions. {{</ note >}}
+
+{{< info >}} Starting from {{% tts %}} `v3.13.0` release, The Things Network community members can freely migrate their gateways from The Things Network {{% ttnv2 %}} to {{% tts %}} Community Edition, while still providing uplink and downlink coverage to The Things Network {{% ttnv2 %}}. This means that the order of actions of migrating gateways and devices is no longer relevant - you can migrate your devices first and then your gateways, or vice versa. {{</ info >}}
 
 ## Add Application in {{% tts %}}
 
@@ -49,14 +53,9 @@ If you are using deployments connected to Packet Broker, the traffic from your e
 
 If you are using deployments that are not connected to Packet Broker, you will have to [migrate your gateway]({{< ref "/getting-started/migrating/gateway-migration" >}}) to receive traffic from your end device in {{% tts %}}. {{</ info >}}
 
-{{< note >}} We recommend The Things Network community members to keep their gateways registered on The Things Network V2 for as long as possible (i.e. to migrate their devices via Packet Broker), or to agree on performing coordinated migration to {{% tts %}} together with the local community to ensure reliable LoRaWAN network coverage. {{</ note >}}
+{{< note >}} Starting from {{% tts %}} `v3.13.0` release, The Things Network community members can freely migrate their gateways from The Things Network {{% ttnv2 %}} to {{% tts %}} Community Edition, while still providing uplink and downlink coverage to The Things Network {{% ttnv2 %}}. {{</ note >}}
 
 There are two approaches for migrating devices, depending on how many end devices you intend to migrate and if you wish to migrate with or without active sessions, described in the following guides:
 
-- [Using {{% tts %}} Console]({{< relref "migrate-using-console" >}}) - this method is convenient only for small number of devices. Migrating active device sessions is not supported.
-- [Using `ttn-lw-migrate` tool]({{< relref "migrate-using-migration-tool" >}}) - this method allows migrating devices in bulk, optionally with active device sessions.
-
-## Migration Decision Tree
-Migrating from V2 to **The Things Stack Cloud** or **The Things Stack Community Edition** (click on the image to enlarge).
-
-[![migration decision tree](migration-decision-tree.jpg "migration decision tree")](migration-decision-tree.jpg)
+- [Using {{% tts %}} Console]({{< relref "migrate-using-console" >}}) - this method is convenient only for small number of devices
+- [Using `ttn-lw-migrate` tool]({{< relref "migrate-using-migration-tool" >}}) - this method allows migrating devices in bulk
