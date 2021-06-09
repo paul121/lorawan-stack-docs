@@ -14,26 +14,60 @@ weight: 1
   </p>
 </div>
 
+<!--
 <div class="columns is-centered has-vertical-space">
   <div class="column">
     {{< whats-new >}}
   </div>
 </div>
+-->
 
-<object class="schema" data="{{< rel-url overview-clickable.svg >}}" type="image/svg+xml" alt="Devices, Gateways, {{% tts %}}, Integrations and Applications" width="100%" class="has-vertical-space"></object>
+<div class="whats-new-background">
+  <div class="whats-new-header2">
+    <p class="whats-new-title">What's new in Vx</p>
+    <a href="https://www.thethingsindustries.com/docs/whats-new/"><p class="see-more">See all release notes -></p></a>
+  </div>
+  <div class="whats-new-content2">
+    <ul class="ul-whats-new">
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, atque harum eligendi magnam iste pariatur nostrum fugiat reiciendis, neque dolores nam at doloremque sed. Ratione ipsum est maiores magni nobis!</li>
+      <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, harum enim suscipit totam cum ipsum ducimus rem adipisci nulla distinctio facere, necessitatibus unde, debitis quaerat non. Laboriosam ducimus eos officiis!</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolores culpa pariatur est fugit iusto accusantium ea quo, quisquam animi et reiciendis ipsum sed, dolorum cumque corporis? Quos, amet officiis?</li>
+    </ul>
+    <div class="more-updates">
+      <a href="https://www.thethingsindustries.com/docs/whats-new/">
+        <div class="circle-more-updates">
+          <p class="news-number">+n</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<a href="https://www.thethingsindustries.com/docs/whats-new/">
+  <div class="whats-new-background-800">
+    <div class="whats-new-header-800">
+      <p>See what's new in Vx</p>
+      <p>-></p>
+    </div>
+  </div>
+</a>
+
+<object class="schema" data="{{< rel-url overview-clickable.svg >}}" type="image/svg+xml" alt="Devices, Gateways, {{% tts %}}, Integrations and Applications" width="70%" class="has-vertical-space"></object>
 
 <div class="columns has-vertical-space">
   <div class="column is-flex">
-    <div class="card has-radius is-fullwidth">
+    <div class="card is-fullwidth">
       <div class="card-content">
-        <h2 class="title is-size-5 has-text-centered is-uppercase">Features</h2>
-        <div class="content">
-          <p class="has-text-grey">
-            {{% tts %}} is comprised of an architecture of loosely coupled components which ensures the security, data routing and battery optimization of LoRaWAN end devices.
-          </p>
-          <p class="has-text-grey">
-            {{% tts %}} is a complete and open source LoRaWAN Network Server designed for various deployment scenarios, supporting all existing LoRaWAN versions (including 1.1), operation modes A, B and C, and all regional parameters as released by the LoRa Alliance.
-          </p>
+        <div class="title-content">
+          <h2 class="title is-size-5 has-text-centered">Features</h2>
+            <div class="content">
+              <p>
+                {{% tts %}} is comprised of an architecture of loosely coupled components which ensures the security, data routing and battery optimization of LoRaWAN end devices.
+              </p>
+              <p>
+                {{% tts %}} is a complete and open source LoRaWAN Network Server designed for various deployment scenarios, supporting all existing LoRaWAN versions (including 1.1), operation modes A, B and C, and all regional parameters as released by the LoRa Alliance.
+              </p>
+            </div>
         </div>
         <div class="buttons is-centered">
           <a href="{{< ref "/download" >}}" class="button is-primary is-outlined">Learn More</a>
@@ -44,14 +78,16 @@ weight: 1
   <div class="column is-flex">
     <div class="card has-radius is-fullwidth">
       <div class="card-content">
-        <h2 class="title is-size-5 has-text-centered is-uppercase">Documentation</h2>
-        <div class="content">
-          <p class="has-text-grey">
-            {{% tts %}} is an open source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliancy and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank" class="is-not-wrapped">The Things Industries</a>.
-          </p>
-          <p class="has-text-grey">
-            LoRaWAN is a protocol for low-power wide area networks. It allows for large scale Internet of Things deployments where low-powered devices efficiently communicate with Internet-connected applications over long range wireless connections.
-          </p>
+        <div class="title-content">
+          <h2 class="title is-size-5 has-text-centered">Documentation</h2>
+            <div class="content">
+              <p>
+                {{% tts %}} is an open source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliancy and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank" class="is-not-wrapped">The Things Industries</a>.
+              </p>
+              <p>
+                LoRaWAN is a protocol for low-power wide area networks. It allows for large scale Internet of Things deployments where low-powered devices efficiently communicate with Internet-connected applications over long range wireless connections.
+              </p>
+            </div>
         </div>
         <div class="buttons is-centered">
           <a href="{{< ref "/getting-started" >}}" class="button is-primary is-outlined">Get Started</a>
@@ -62,15 +98,17 @@ weight: 1
   <div class="column is-flex">
     <div class="card has-radius is-fullwidth">
       <div class="card-content">
-        <h2 class="title is-size-5 has-text-centered is-uppercase">Community</h2>
-        <div class="content">
-            <p class="has-text-grey">
-              Thanks to a large developer community, {{% tts %}} is continuously being improved. There are many ways to contribute to the project, thinking of reporting issues, requesting and implementing new features and writing documentation. Read more on how to contribute in the <a href="https://github.com/TheThingsNetwork/lorawan-stack" target="_blank">LoRaWAN stack repository</a>.
-            </p>
-            <p class="has-text-grey">
-              Hosted solutions, as well as commercial support and consultancy are offered by <a href="https://www.thethingsindustries.com/" target="_blank" class="is-not-wrapped">The Things Industries</a>.
-            </p>
-        </div>
+        <div class="title-content">
+          <h2 class="title is-size-5 has-text-centered">Community</h2>
+          <div class="content">
+              <p>
+                Thanks to a large developer community, {{% tts %}} is continuously being improved. There are many ways to contribute to the project, thinking of reporting issues, requesting and implementing new features and writing documentation. Read more on how to contribute in the <a href="https://github.com/TheThingsNetwork/lorawan-stack" target="_blank">LoRaWAN stack repository</a>.
+              </p>
+              <p>
+                Hosted solutions, as well as commercial support and consultancy are offered by <a href="https://www.thethingsindustries.com/" target="_blank" class="is-not-wrapped">The Things Industries</a>.
+              </p>
+          </div>
+          </div>
         <div class="buttons is-centered">
           <a href="https://www.thethingsnetwork.org/forum/c/network-and-routing/v3" target="_blank" class="button is-primary is-outlined">Developer Forum</a>
         </div>
