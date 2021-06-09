@@ -94,7 +94,7 @@ $ ttn-lw-cli end-devices set <app-id> <device-id> --mac-settings.desired-max-dut
 To enable ADR, set the `mac-settings.use-adr` parameter
 
 ```bash
-$ ttn-lw-cli end-devices set <app-id> <device-id> --mac-settings.use-adr=true 
+$ ttn-lw-cli end-devices set <app-id> <device-id> --mac-settings.use-adr=true
 ```
 
 ### Set RX1 Delay
