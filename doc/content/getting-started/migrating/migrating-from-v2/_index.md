@@ -35,9 +35,32 @@ Since end devices are being created within applications, you first need to add a
 
 After creating an application, you need to add the associated elements like application-level payload formatters and integrations.
 
-{{< note >}} The payload formatters can be uplink and downlink, and they are what was known in {{% ttnv2 %}} as coders and decoders. The format of payload coders and decoders is still supported in {{% tts %}}.
+{{< info >}} The payload formatters can be uplink and downlink, and they are what was known in {{% ttnv2 %}} as coders and decoders. In {{% tts %}}, it is also possible to add payload formatters per end device, which override application payload formatters. However, before devices are migrated to {{% tts %}} it is only possible to add a payload formatter per application. {{</ info >}}
 
-In {{% tts %}}, it is also possible to add payload formatters per end device, which override application payload formatters. However, before devices are migrated to {{% tts %}} it is only possible to add a payload formatter per application. {{</ note >}}
+{{< note >}} The format of {{% ttnv2 %}} payload coders and decoders is still supported in {{% tts %}}. You only need to add one additional line to the function code used in {{% ttnv2 %}} to make it fully compatible with {{% tts %}}. For example, if your payload decoder function in {{% ttnv2 %}} was:
+
+```js
+function Decoder(bytes) {
+    var temperature = bytes[0] | bytes[2];  
+    return {
+        temperature: temperature;
+    }
+}
+```
+
+then your uplink payload formatter function in {{% tts %}} should be:
+
+```js
+function decodeUplink(input) {
+    var bytes = input.bytes;
+    var temperature = bytes[0] | bytes[2];
+    return {
+        temperature: temperature;
+    }
+}
+```
+
+{{</ note >}}
 
 > See [Payload Formatters]({{< ref "/integrations/payload-formatters" >}}) guide for detailed instructions on how to add payload formatters and which types are supported by {{% tts %}}. 
 
